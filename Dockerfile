@@ -49,11 +49,11 @@ RUN apt-get update && \
 COPY ops/supervisor.conf /etc/supervisor/supervisord.conf
 RUN mkdir /run/php 
 
-COPY ops/www.conf /etc/php/8.1/fpm/pool.d/
-COPY ops/php8proxy /etc/nginx/php8proxy
-COPY ops/nginx.conf /etc/nginx/
-COPY ops/apps.conf /etc/nginx/conf.d/apps.conf
-COPY ops/php.ini /etc/php/8.1/fpm/
+COPY www.conf /etc/php/8.1/fpm/pool.d/
+COPY php8proxy /etc/nginx/php8proxy
+COPY nginx.conf /etc/nginx/
+COPY apps.conf /etc/nginx/conf.d/apps.conf
+COPY php.ini /etc/php/8.1/fpm/
 
 #apps
 RUN mkdir /var/www/apps

@@ -46,7 +46,7 @@ RUN mv composer.phar /usr/local/bin/composer && chmod +x /usr/local/bin/composer
 RUN apt-get update && \
 	apt-get install -y supervisor --no-install-recommends && \
 	rm -rf /var/lib/apt/lists/*
-COPY ops/supervisor.conf /etc/supervisor/supervisord.conf
+COPY supervisor.conf /etc/supervisor/supervisord.conf
 RUN mkdir /run/php 
 
 COPY www.conf /etc/php/8.1/fpm/pool.d/

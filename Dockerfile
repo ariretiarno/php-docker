@@ -23,10 +23,10 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN curl https://packages.sury.org/php/apt.gpg | apt-key add -
 RUN echo 'deb https://packages.sury.org/php/ buster main' > /etc/apt/sources.list.d/deb.sury.org.list
 
-# php8
+# php7.4
 RUN apt-get update && \
-       apt-get install -y php8.1-fpm php8.1-cli php8.1-common php8.1-opcache php8.1-curl php8.1-mbstring php8.1-zip php8.1-imagick php8.1-xml php8.1-gd php8.1-pgsql php8.1-mysql php8.1-pdo --no-install-recommends && \
-       rm -rf /var/lib/apt/lists/*
+	apt-get install -y php7.4-fpm php7.4-cli php7.4-common php7.4-opcache php7.4-curl php7.4-mbstring php7.4-zip php7.4-xml php7.4-gd php7.4-pgsql php7.4-pdo php7.4-json php7.4-mysql --no-install-recommends && \
+	rm -rf /var/lib/apt/lists/*
 
 # verify versions
 RUN php -v
@@ -49,11 +49,11 @@ RUN apt-get update && \
 COPY supervisor.conf /etc/supervisor/supervisord.conf
 RUN mkdir /run/php 
 
-COPY www.conf /etc/php/8.1/fpm/pool.d/
-COPY php8proxy /etc/nginx/php8proxy
+COPY www.conf /etc/php/7.4/fpm/pool.d/
+COPY php7proxy /etc/nginx/php7proxy
 COPY nginx.conf /etc/nginx/
 COPY apps.conf /etc/nginx/conf.d/apps.conf
-COPY php.ini /etc/php/8.1/fpm/
+COPY php.ini /etc/php/7.4/fpm/
 
 #apps
 RUN mkdir /var/www/apps

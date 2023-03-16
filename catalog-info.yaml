@@ -5,6 +5,10 @@ metadata:
   description: testing service for testing
   tags:
     - php
+  links:
+    - url: https://evermos.com
+      title: evermos
+      icon: evermos
 spec:
   type: service
   lifecycle: production

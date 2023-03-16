@@ -15,3 +15,5 @@ spec:
   owner: brandops
   dependsOn: ['resource:evermos-db']
   system: sistem-portal-evermos
+  consumesApis:
+    - evermos-be-daftar

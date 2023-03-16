@@ -14,3 +14,4 @@ spec:
   lifecycle: production
   owner: brandops
   dependsOn: ['component:testing']
+  system: sistem-portal-evermos

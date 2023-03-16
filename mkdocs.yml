@@ -1,0 +1,15 @@
+site_name: 'Evermos'
+site_description: 'Main documentation for Evermos features and platform APIs'
+repo_url: https://github.com/ariretiarno/php-docker
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+nav:
+  - Overview:
+      - What is Evermos?: 'index.md'
+  - Support:
+      - Backstage Project Structure: 'support/project-structure.md'
+  - Glossary: glossary.md
+  - FAQ: FAQ.md

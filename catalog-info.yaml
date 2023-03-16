@@ -17,3 +17,5 @@ spec:
   system: sistem-portal-evermos
   consumesApis:
     - evermos-be-daftar
+  providesApis:
+    - evermos-be-list

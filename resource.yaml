@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: evermos-db
+  description: Evermos Database
+spec:
+  type: database
+  owner: brandops
+  system: sistem-portal-evermos

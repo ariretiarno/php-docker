@@ -13,4 +13,4 @@ spec:
   type: service
   lifecycle: production
   owner: brandops
-  dependsOn: ['resource:testing']
+  dependsOn: ['component:testing']

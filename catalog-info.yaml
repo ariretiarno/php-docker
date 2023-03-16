@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: evermos-be
+  description: testing service for testing
+  tags:
+    - php
+spec:
+  type: service
+  lifecycle: production
+  owner: brand-ops
